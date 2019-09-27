@@ -1,5 +1,5 @@
-#Problema 007
-from timeit import default_timer as timer
+# -*- coding: utf-8 -*-
+#Problem 007 - 10001st prime
 import math
 
 def primo(n):
@@ -10,8 +10,6 @@ def primo(n):
             return False
     return True
     
-start = timer()
-
 primes = [2]
 
 a = 3
@@ -22,13 +20,4 @@ while b < 10001:
         b += 1
     a += 2
 
-end = timer()
-exec_time = end - start
-
-print primes[10000]
-print str(exec_time) + " sec"
-
-f = open('007 - 10001st prime.txt', 'w')
-f.write(str(primes[10000]) + '\n')
-f.write(str(exec_time) + " sec" + '\n')
-f.close()
+print(primes[10000])

@@ -1,6 +1,7 @@
-#Problema 011
+# -*- coding utf-8 -*-
+#Problem 011 - Largest product in a grid
 
-with open('grid.txt') as f:
+with open('011 - Largest product in a grid - Data.txt') as f:
     data = [i.split() for i in f.readlines()]
 
 for i in range(20):

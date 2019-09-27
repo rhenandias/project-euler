@@ -1,5 +1,5 @@
-#Problema 012
-from timeit import default_timer as timer
+# -*- coding: utf-8 -*-
+#Problem 012 - Highly divisible triangular number
 import math
 
 def gen_primes(n):
@@ -32,12 +32,10 @@ def fatorar(n, primos):
     
 def triangle(n):
     soma = 0
-    for i in xrange(n + 1):
+    for i in range(n + 1):
         soma += i
     return soma
     
-start = timer()
-
 primes = gen_primes(10000)    
     
 divisors = 1
@@ -55,18 +53,4 @@ while divisors < 500:
         divisors *= (fatores.count(primes[i]) + 1)
 
 number = triang
-
-end = timer()
-exec_time = end - start
-
-print number
-print str(exec_time) + " sec"
-
-f = open('012 - Highly divisible triangular number.txt', 'w')
-f.write(str(number) + '\n')
-f.write(str(exec_time) + " sec" + '\n')
-f.close()
-
-
-
-    
+print(number)

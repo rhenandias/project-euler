@@ -1,7 +1,5 @@
-#Problema 005
-from timeit import default_timer as timer
-start = timer()
-
+# -*- coding: utf-8 -*-
+#Problem 005 - Smallest multiple
 a = 1
 x = 100
 digits = 20
@@ -19,13 +17,4 @@ while True:
             a = 1
             x += 1
 
-end = timer()
-exec_time = end - start
-
-print x
-print str(exec_time) + " sec"
-
-f = open('005 - Smallest multiple.txt', 'w')
-f.write(str(value) + '\n')
-f.write(str(exec_time) + " sec" + '\n')
-f.close()
+print(x)

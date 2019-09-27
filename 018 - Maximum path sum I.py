@@ -1,5 +1,5 @@
-#problema 018
-
+# -*- coding: utf-8 -*-
+#problem 018 - Maximum path sum
 import numpy as np
 
 triangle = [[int(i) for i in line.split()] for line in open('018 - Maximum path sum I - Data.txt')]

@@ -1,13 +1,14 @@
-#Problema 022
+# -*- coding: utf-8 -*-
+#Problem 022 - Names scores
 
 #Leitura de Arquivo
-f = open('names.txt','r')
+f = open('022 - Names scores - Data.txt','r')
 data = f.read()
 data = data.split(",")
 data = [i.replace('"', "") for i in data ]
 data = sorted(data)
 
-#CriaÁ„o do dicion·rio
+#Cria√ß√£o do dicion√°rio
 letters_dict = {}
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 for i in range(0, 26):
@@ -26,4 +27,4 @@ scores = []
 for i in range(size):
     scores.append(score(data[i]) * (i+1))
 
-print sum(scores)
+print(sum(scores))

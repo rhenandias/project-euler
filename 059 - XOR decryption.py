@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
+#Problem 059 - XOR decryption
 import itertools as it
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 data = []
-with open("p059_cipher.txt", 'r') as input_file:
+with open("059 - XOR decryption - Data.txt", 'r') as input_file:
     for line in input_file:
         data = [int(i) for i in line.split(',')]
         
@@ -26,4 +27,4 @@ for i in message:
 
 message = [ord(i) for i in message]
 
-print sum(message)
+print(sum(message))

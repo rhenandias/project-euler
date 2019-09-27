@@ -1,5 +1,5 @@
-#Problema 003
-from timeit import default_timer as timer
+# -*- coding: utf-8 -*-
+#Problem 003 - Largest prime factor
 import math
 
 def primo(n):
@@ -9,8 +9,6 @@ def primo(n):
         if not(n % i):
             return False
     return True
-
-start = timer()
 
 prime_factor = 0
 x = 600851475143
@@ -22,13 +20,5 @@ while x > 1:
         x = x/a
     a += 1
     
-end = timer()
-exec_time = end - start
 
-print prime_factor
-print str(exec_time) + " sec"
-
-f = open('003 - Largest prime factor.txt', 'w')
-f.write(str(prime_factor) + '\n')
-f.write(str(exec_time) + " sec" + '\n')
-f.close()
+print(prime_factor)

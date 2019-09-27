@@ -1,5 +1,5 @@
-#Problema 040
- 
+# -*- coding: utf-8 -*-
+#Problema 040 - Champernowne's constant
 l = ""
 i = 0
  
@@ -11,4 +11,4 @@ acc = 1
 for i in(0, 9, 99, 999, 9999, 99999, 999999):
     acc *= int(l[i])
      
-print acc
+print(acc)

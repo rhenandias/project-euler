@@ -1,34 +1,30 @@
-#Problema 9
-from timeit import default_timer as timer
-start = timer()
+# -*- coding: utf-8 -*-
+#Problem 009 - Special Pythagorean triplet
+import itertools as it
 
+#Solução com método por Itertools
+numbers = [list(range(1, 500)), list(range(1, 500)), list(range(1, 500))]
+combinations = list(it.combinations_with_replacement(numbers[0], 3))
+
+def search2():
+	for i in combinations:
+		if i[0] + i[1] + i[2] == 1000 and i[0]**2 + i[1]**2 == i[2]**2:
+			return i
+
+#Solução com metodo linear
 check = False
 value = 0
+def search():
+	for i in range(1, 500):
+		for j in range(1, 500):
+			for k in range(1, 500):
+				if i + j + k == 1000 and i**2 + j**2 == k**2:
+					return [i, j, k]             
 
-for i in range(1, 500):
-    for j in range(1, 500):
-        for k in range(1, 500):
-            if i + j + k == 1000 and i**2 + j**2 == k**2:
-                value = [i, j, k]
-                check = True
-            if check:
-                break
-        if check:
-            break
-    if check:
-        break                
+#No método itertools é gerada a lista completa de combinações
+#Comparando as duas, o tempo para gerar a lista toda não compensa
+#o método de brute force da geração linear
 
+value = search()
 final = value[0] * value[1] * value[2]
-
-end = timer()
-exec_time = end - start
-
-print final
-print str(exec_time) + " sec"
-
-f = open('009 - Special Pythagorean triplet.txt', 'w')
-f.write(str(final) + '\n')
-f.write(str(exec_time) + " sec" + '\n')
-f.close()
-
-                
+print(final)

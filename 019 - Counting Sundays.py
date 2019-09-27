@@ -1,5 +1,5 @@
-#Problema 019
-
+# -*- coding: utf-8 -*-
+#Problem 019 - Couting sundays
 from math import floor
 
 def compute_day(q, m, y):

@@ -1,6 +1,5 @@
-#Problema 014
-from timeit import default_timer as timer
-
+# -*- coding: utf-8 -*-
+#Problem 014 - Longest Collatz sequence
 def even(n):
     if not(n % 2):
         return True
@@ -16,27 +15,15 @@ def collatz(n):
         sequence.append(n)
     return sequence
     
-start = timer()
-
 last_amount = 0
 last_number = 0
         
-for i in xrange(1000000):
+for i in range(1000000):
     seq = collatz(i)
     size = len(seq)
     if size > last_amount:
         last_amount = size
         last_number = i
-        
-end = timer()
-exec_time = end - start
 
-print last_number
-print str(exec_time) + " sec"
-
-f = open('014 - Longest Collatz sequence.txt', 'w')
-f.write(str(last_number) + '\n')
-f.write(str(exec_time) + " sec" + '\n')
-f.close()
-
+print(last_number)
     

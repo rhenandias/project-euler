@@ -1,5 +1,5 @@
-#Problema 021
-
+# -*- coding: utf-8 -*-
+#Problem 021 - Amicable numbers
 def sum_divisors(n):
     divisors = 0
     for i in range(1, n):
